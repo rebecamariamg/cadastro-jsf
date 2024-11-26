@@ -1,0 +1,170 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --dourada: #E5C16C; 
+    --azul: #052A3A; 
+    --cinza-titulos: #2C2C2C;
+    --cinza-subtitulos: #4d4d4d;
+    --cinza-div: #b4b4b4;
+
+
+}
+
+body {
+    font-family: 'Poppins';
+    background-color: var(--azul);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: #fff;
+    padding: 55px;
+    border-radius: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 520px;
+}
+
+.container-usuarios {
+    background: #fff;
+    padding: 55px;
+    border-radius: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 1000px;
+}
+
+span {
+    text-align: left;
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 4px;
+    color: var(--cinza-titulos);
+}
+
+h1 {
+    text-align: left;
+    margin-bottom: 4px;
+    font-size: 28px;
+    font-weight: 900;
+    color: var(--dourada);
+}
+
+h2 {
+    text-align: left;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 16px;
+    color: var(--cinza-subtitulos);
+}
+
+h3 {
+    text-align: left;
+    font-size: 18px;
+    font-weight: 300;
+    margin-bottom: 4px;
+    color: var(--cinza-subtitulos);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+
+}
+
+label {
+    margin-top: 12px;
+    margin-bottom: 5px;
+    font-size: 14px;
+    color: var(--cinza-titulos);
+}
+
+input[type="text"], input[type="password"], select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    margin-top: 18px;
+}
+
+.btn {
+    padding: 14px 44px;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 16px;
+    color: #fff;
+}
+
+.primario {
+    background-color:var(--dourada);
+}
+
+.secundario {
+    border: 2px solid var(--dourada);
+    color: var(--dourada);
+    background-color: white;
+}
+
+.excluir{
+    background-color:var(--dourada);
+}
+
+.role, .lembrar-me {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+}
+
+.cadastro{
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+}
+
+.lembrar-me {
+    display: flex;
+    align-items: center; 
+}
+
+.user-item{
+    display: flex;
+    align-items: center; 
+    justify-content: space-between; 
+    border-bottom: 1px solid var(--cinza-div);
+    margin-top: 16px;
+
+}
+
+.info-usuario{ 
+    margin-bottom: 8px;
+
+}
+
+select {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: var(--cinza-subtitulos);
+}
+
+select option {
+    font-size: 14px;
+}

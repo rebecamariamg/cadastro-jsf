@@ -1,0 +1,46 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+  xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+  xmlns:p="http://primefaces.org/ui" xmlns:o="http://omnifaces.org/ui" xmlns:of="http://omnifaces.org/functions">
+<h:head>
+  <meta charset="UTF-8" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css" />
+</h:head>
+
+<h:body>
+  <div class="container-usuarios">
+
+    <h1>Usuários</h1>
+    
+    <div class="user-list">
+
+      <ui:repeat value="#{usuarioController.allUsers}" var="usuario">
+        <div class="user-item">
+
+          <div class="info-usuario">
+            <span>Usuário: #{usuario.user}</span>
+            <h3>Tipo: #{usuario.perfil}</h3>
+            <h3>Curso: #{usuario.curso}</h3>
+          </div>
+
+          <h:form>
+            <h:commandButton value="Excluir" action="#{loginBean.excluir}" class="btn excluir">
+                <f:param name="usuarioId" value="#{usuario.user}" />
+            </h:commandButton>
+          </h:form>
+        </div>
+      </ui:repeat>
+
+    </div>
+
+    <div class="buttons">
+      <a href="cadastro.xhtml">
+        <button type="button" class="btn primario">
+          Cadastrar novo usuário
+        </button>
+      </a>
+    </div>
+  </div>
+</h:body>
+</html>

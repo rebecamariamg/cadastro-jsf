@@ -1,0 +1,33 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+  xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+  xmlns:p="http://primefaces.org/ui" xmlns:o="http://omnifaces.org/ui" xmlns:of="http://omnifaces.org/functions">
+<h:head>
+  <meta charset="UTF-8" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+  <title>Login</title>
+  <link rel="stylesheet" href="style.css" />
+</h:head>
+
+<h:body>
+  <div class="container">
+    <h1>Login</h1>
+    <h2>Faça login para ver os usuários 🕵️</h2>
+    
+    <h:form>
+      <label for="usuario">Usuário:</label>
+      <h:inputText id="usuario" value="#{loginBean.user}" required="true" placeholder="Digite seu usuário" />
+
+      <label for="senha">Senha:</label>
+      <h:inputSecret id="senha" value="#{loginBean.senha}" required="true" placeholder="Digite sua senha" />
+
+      <div class="buttons">
+        <h:commandButton value="Entrar" action="#{loginBean.login}" class="btn primario" />
+        <a href="cadastro.xhtml">
+          <button type="button" class="btn secundario">Cadastrar</button>
+        </a>
+      </div>
+    </h:form>
+  </div>
+</h:body>
+
+</html>

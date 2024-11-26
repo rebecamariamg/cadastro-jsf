@@ -1,0 +1,65 @@
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://xmlns.jcp.org/jsf/html"
+  xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+  xmlns:p="http://primefaces.org/ui" xmlns:o="http://omnifaces.org/ui" xmlns:of="http://omnifaces.org/functions">
+<h:head>
+  <meta charset="UTF-8" />
+  <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
+  <title>Cadastre-se</title>
+  <link rel="stylesheet" href="style.css" />
+</h:head>
+
+<h:body>
+  <div class="container">
+      <h1>Cadastro de Usuário</h1>
+      <h2>Seja bem-vindo 👋</h2>
+      
+      <h:form>
+        <label for="usuario">Usuário:</label>
+        <h:inputText id="usuario" value="#{loginBean.user}" required="true" 
+                     placeholder="Digite seu usuário" />
+    
+        <label for="senha">Senha:</label>
+        <h:inputSecret id="senha" value="#{loginBean.senha}" required="true" 
+                       placeholder="Digite sua senha" />
+    
+        <label for="curso">Selecione seu curso:</label>
+        <h:selectOneMenu id="curso" value="#{loginBean.curso}" required="true">
+            <f:selectItem itemValue="" itemLabel="Selecione seu curso" noSelectionOption="true" />
+            <f:selectItem itemValue="engenharia" itemLabel="Engenharia de Software" />
+            <f:selectItem itemValue="ciencias" itemLabel="Ciência da Computação" />
+            <f:selectItem itemValue="ads" itemLabel="Análise e Desenvolvimento de Sistemas" />
+            <f:selectItem itemValue="dados" itemLabel="Ciência de Dados" />
+            <f:selectItem itemValue="design" itemLabel="Design Gráfico" />
+        </h:selectOneMenu>
+    
+        <div class="cadastro">
+            <div class="role">
+                <label>
+                    <h:selectOneRadio value="#{loginBean.perfil}">
+                        <f:selectItem itemValue="docente" itemLabel="Docente" />
+                        <f:selectItem itemValue="discente" itemLabel="Discente" />
+                    </h:selectOneRadio>
+                </label>
+            </div>
+            <div class="lembrar-me">
+                <label>
+                    <h:selectBooleanCheckbox value="#{loginBean.lembrar}" />
+                    Lembrar-me
+                </label>
+            </div>
+        </div>
+    
+        <div class="buttons">
+            <a href="index.xhtml">
+                <button type="button" class="btn secundario">Voltar</button>
+            </a>
+    
+            <h:commandButton value="Cadastrar" action="#{loginBean.cadastrar}" class="btn primario" />
+        </div>
+    </h:form>
+      
+  </div>
+</h:body>
+
+
+</html>
