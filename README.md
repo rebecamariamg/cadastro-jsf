@@ -1,4 +1,4 @@
-# Project ucb.login/app
+# Projeto login e cadastro com JSF
 
 Passos para rodar esse projeto:
 
